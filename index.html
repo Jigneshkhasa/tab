@@ -143,6 +143,16 @@
                 .siblings()
                 .removeClass("active");
         });
+
+        $(document).ready(function () {
+            $('#check').change(function () {
+                if ($(this).is(':checked')) {
+                    $('.thirdtab').css('display', 'inline-block');
+                } else {
+                    $('.thirdtab').css('display', 'none');
+                }
+            });
+        });
     </script>
 </body>
 

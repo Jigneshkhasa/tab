@@ -36,7 +36,7 @@ nav a {
 nav a:hover {
     color: yellow;
     border-color: yellow;
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 
 nav a.active {
@@ -161,6 +161,10 @@ div[class^="cat"]>input:checked~.question-wrap {
 
 .question-wrap input:focus+label {
     color: #064060;
+}
+
+.tab-link {
+    display: inline-block;
 }
 
 .question-wrap input:not(:checked)~p {
