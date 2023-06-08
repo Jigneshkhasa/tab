@@ -1,0 +1,184 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: black;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    margin-top: 80px;
+}
+
+nav {
+    width: 100%;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+nav a {
+    margin-right: 1rem;
+    list-style: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-bottom: solid 4px ghostwhite;
+    color: ghostwhite;
+}
+
+nav a:hover {
+    color: yellow;
+    border-color: yellow;
+    font-size: 20px;
+}
+
+nav a.active {
+    color: deeppink;
+    border-color: deeppink;
+}
+
+.tab_content {
+    padding: 40px 80px;
+}
+
+.tab-content {
+    display: none;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* ACCORDION CSS */
+.tab-content .wrap {
+    display: block;
+    max-width: 1024px;
+    margin: 0 auto 2em;
+    padding: 0 1em;
+    width: 100%;
+}
+
+
+.question-section {
+    background: #ebfdfb;
+    box-shadow: 0 2px 5px rgba(68, 68, 68, .4);
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 16px;
+    padding: 1em;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+}
+
+
+.question-section h1 {
+    color: #085078;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.question-section>h1 {
+    text-align: center;
+}
+
+
+div[class^="cat"] {
+    width: 100%;
+}
+
+div[class^="cat"]>label {
+    background: #72d2c6;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    padding: 12px 8px;
+    transition: all 0.55s;
+}
+
+div[class^="cat"]>label:hover {
+    background: #85d8ce;
+}
+
+
+div[class^="cat"]>input {
+    position: absolute;
+    z-index: -1;
+}
+
+div[class^="cat"]>input:focus+label {
+    background: #4bc5b7;
+    letter-spacing: 1px;
+}
+
+div[class^="cat"] .question-wrap {
+    height: 100%;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 100%;
+}
+
+div[class^="cat"]>input:checked~.question-wrap {
+    max-height: 1000px;
+    opacity: 1;
+    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.question-wrap .question {
+    margin: 15px 0;
+}
+
+.question-wrap label {
+    color: #0a6090;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+
+.question-wrap input {
+    position: absolute;
+    z-index: -1;
+    top: -10000px;
+}
+
+.question-wrap input:focus+label {
+    color: #064060;
+}
+
+.question-wrap input:not(:checked)~p {
+    height: 100%;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.question-wrap input:checked~p {
+    max-height: 500px;
+    opacity: 1;
+    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+input:focus {
+    border: 3px solid red;
+    outline: 3px solid red;
+    background: red;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>tab</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a class="tab-link active" data-tab="1">One</a>
+            <a class="tab-link" data-tab="2">Two</a>
+            <a class="tab-link" data-tab="3">Three</a>
+            <a class="tab-link" data-tab="4">Four</a>
+            <a class="tab-link" data-tab="5">Five</a>
+        </nav>
+
+        <div class="tab_content">
+
+            <div id="tab-1" class="tab-content active">
+                <p>VIRAT KOHLI.</p>
+                <img src="https://images.hindustantimes.com/img/2022/09/08/550x309/Emirates-Asia-Cup-Cricket-44_1662651873143_1662651873143_1662651900814_1662651900814.jpg"
+                    alt="">
+            </div>
+
+            <div id="tab-2" class="tab-content">
+                <p>SURYAKUMAR YADAV</p>
+                <img src="https://images.hindustantimes.com/img/2022/11/24/550x309/ANI-20221106151-0_1669269068267_1669269068267_1669269094865_1669269094865.jpg"
+                    alt="">
+            </div>
+
+
+            <div id="tab-3" class="tab-content">
+                <p>HARDIK PANDYA</p>
+                <img src="https://circleofcricket.com/post_image/post_image_0ecd83c.jpeg" alt="">
+            </div>
+
+
+            <div id="tab-4" class="tab-content">
+                <div class="wrap">
+                    <section class="question-section">
+                        <h1>ACCORDION</h1>
+                        <div class="cat-1">
+                            <input id="acc-1" type="radio" name="tabs" tabindex="1">
+                            <label for="acc-1">Accordion-1</label>
+                            <div class="question-wrap">
+                                <div class="question">
+                                    <input id="question-1" type="radio" name="questions-tab-one" tabindex="2">
+                                    <label for="question-1">Lorem ipsum dolor sit amet.</label>
+
+                                </div>
+                                <div class="question">
+                                    <input id="question-2" type="radio" name="questions-tab-one" tabindex="3">
+                                    <label for="question-2">Lorem ipsum dolor sit amet.</label>
+
+                                </div>
+                                <div class="question">
+                                    <input id="question-3" type="radio" name="questions-tab-one" tabindex="4">
+                                    <label for="question-3">Lorem ipsum dolor sit amet.</label>
+
+                                </div>
+                                <div class="question">
+                                    <input id="question-4" type="radio" name="questions-tab-one" tabindex="5">
+                                    <label for="question-4">Lorem ipsum dolor sit amet.</label>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cat-2">
+                            <input id="acc-2" type="radio" name="tabs" tabindex="7">
+                            <label for="acc-2">Accordion-2</label>
+
+                            <div class="question-wrap">
+                                <div class="question">
+                                    <input id="question-5" type="radio" name="questions-tab-two" tabindex="8">
+                                    <label for="question-5">Lorem ipsum dolor sit amet.</label>
+
+                                </div>
+                                <div class="question">
+                                    <input id="question-6" type="radio" name="questions-tab-two" tabindex="10">
+                                    <label for="question-6">Lorem ipsum dolor sit amet.</label>
+
+                                    </p>
+                                </div>
+                                <div class="question">
+                                    <input id="question-7" type="radio" name="questions-tab-two" tabindex="12">
+                                    <label for="question-7">Lorem ipsum dolor sit amet.</label>
+
+                                </div>
+                                <div class="question">
+                                    <input id="question-8" type="radio" name="questions-tab-two" tabindex="14">
+                                    <label for="question-8">Lorem ipsum dolor sit amet.</label>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cat-3">
+                            <input id="acc-3" type="radio" name="tabs" tabindex="16">
+                            <label for="acc-3">Accordion-3</label>
+
+                            <div class="question-wrap">
+                                <div class="question">
+                                    <input id="question-9" type="radio" name="questions-tab-three" tabindex="17">
+                                    <label for="question-9">Lorem ipsum dolor sit amet.</label>
+                                </div>
+                                <div class="question">
+                                    <input id="question-10" type="radio" name="questions-tab-three" tabindex="19">
+                                    <label for="question-10">Lorem ipsum dolor sit amet.</label>
+
+                                </div>
+                                <div class="question">
+                                    <input id="question-11" type="radio" name="questions-tab-three" tabindex="21">
+                                    <label for="question-11">Lorem ipsum dolor sit amet.</label>
+
+                                </div>
+                                <div class="question">
+                                    <input id="question-12" type="radio" name="questions-tab-three" tabindex="23">
+                                    <label for="question-12">Lorem ipsum dolor sit amet.</label>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+            <div id="tab-5" class="tab-content">
+                <p>MAHINDRA SINGH DHONI</p>
+                <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201912/msdhoniaakashchopra.png?size=690:388"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+        $("nav a").click(function () {
+            var tabID = $(this).attr("data-tab");
+
+            $(this).addClass("active").siblings().removeClass("active");
+
+            $("#tab-" + tabID)
+                .addClass("active")
+                .siblings()
+                .removeClass("active");
+        });
+    </script>
+</body>
+
+</html>
